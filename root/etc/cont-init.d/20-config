@@ -12,10 +12,10 @@ if [[ -f /btsync/btsync ]]; then
 	if [[ $checksum == "b8cf34f7e3b9076aaaa67db6451a934d" ]]; then
 		echo "Already the latest version"
 	else
-		cp -f /tmp/btsync_x64-1.4.111/btsync /btsync/btsync && echo "Install  ..."
+		cp -f /tmp/btsync /btsync/btsync && echo "Install  ..."
 	fi
 else
-	cp -f /tmp/btsync_x64-1.4.111/btsync /btsync/btsync && echo "Install  ..."
+	cp -f /tmp/btsync /btsync/btsync && echo "Install  ..."
 fi
 
 [[ ! -f /btsync/btsync.conf ]] && cp -f \
