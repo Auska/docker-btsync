@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+exec \
+	zerotier-cli join $NETWORK
+exec \
+	zerotier-cli set $NETWORK allowGlobal=1
+exec \
+	sed -i '|54.192.232.168 config.resilio.com|d' /etc/hosts && \
+	echo "54.192.232.168 config.resilio.com" >> /etc/hosts
