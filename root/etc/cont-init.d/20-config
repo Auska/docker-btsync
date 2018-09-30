@@ -1,0 +1,29 @@
+#!/usr/bin/with-contenv bash
+
+# make folders
+mkdir -p \
+	/btsync
+
+# copy
+tar zxvf /defaults/btsync_x64-1.4.111.tar.gz -C /tmp/
+
+if [[ -f /btsync/btsync ]]; then
+	checksum=`md5sum /btsync/btsync | cut -d " " -f 1`
+	if [[ $checksum == "b8cf34f7e3b9076aaaa67db6451a934d" ]]; then
+		echo "Already the latest version"
+	else
+		cp -f /tmp/btsync_x64-1.4.111/btsync /btsync/btsync && echo "Install  ..."
+	fi
+else
+	cp -f /tmp/btsync_x64-1.4.111/btsync /btsync/btsync && echo "Install  ..."
+fi
+
+[[ ! -f /btsync/btsync.conf ]] && cp -f \
+	/defaults/btsync.conf /btsync/btsync.conf
+
+rm -rf /tmp/*
+
+# permissions
+chown abc:abc -R \
+	/btsync/ \
+	/mnt
