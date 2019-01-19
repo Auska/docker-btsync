@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bash
 
 exec \
-	s6-setuidgid root /rslsync/rslsync --config /rslsync/rslsync.conf
+	s6-setuidgid abc /rslsync/rslsync --config /rslsync/rslsync.conf &> /dev/null
