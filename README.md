@@ -7,6 +7,7 @@ http://blog.auska.win
 docker create --name=rslsync \
 -v <path to downloads>:/mnt \
 -v <path to rslsync>:/rslsync \
+-v <path to config>:/config \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
 -p 28888:28888 -p 50000:50000 \

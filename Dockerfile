@@ -23,4 +23,4 @@ COPY root/ /
 
 # ports and volumes
 EXPOSE 28888 50000
-VOLUME /config /mnt
+VOLUME /config /rslsync /mnt
