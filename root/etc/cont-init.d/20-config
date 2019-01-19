@@ -27,4 +27,5 @@ rm -rf /tmp/*
 # permissions
 chown abc:abc -R \
 	/rslsync/ \
-	/mnt
+	/mnt \
+	/config
