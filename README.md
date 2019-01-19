@@ -4,13 +4,13 @@ http://blog.auska.win
 ## Usage
 
 ```
-docker create --name=btsync \
+docker create --name=rslsync \
 -v <path to downloads>:/mnt \
--v <path to btsync>:/btsync \
+-v <path to rslsync>:/rslsync \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
--p 8888:8888 -p 54545:54545 \
-auska/docker-btsync
+-p 28888:28888 -p 50000:50000 \
+auska/docker-btsync:rslsync
 ```
 
 ### User / Group Identifiers

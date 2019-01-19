@@ -22,5 +22,5 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-EXPOSE 8888 50000
-VOLUME /btsync /mnt
+EXPOSE 28888 50000
+VOLUME /config /mnt
