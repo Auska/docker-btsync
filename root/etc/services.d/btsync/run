@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bash
 
 exec \
-	s6-setuidgid abc /btsync/btsync --config /config/btsync.conf --nodaemon
+	s6-setuidgid abc /usr/bin/btsync --webui.listen 0.0.0.0:$PORT --config /config/btsync.conf --nodaemon

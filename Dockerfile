@@ -6,7 +6,7 @@ ARG VERSION
 LABEL build_version="blog.auska.win version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Auska"
 
-ENV GLIBC_VERSION=2.30-r0 TZ=Asia/Shanghai
+ENV GLIBC_VERSION=2.30-r0 TZ=Asia/Shanghai PORT=8888
 
 RUN \
  echo "**** install packages ****" && \
@@ -20,5 +20,5 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-EXPOSE 8888 50000
+EXPOSE $PORT 50000
 VOLUME /config /mnt
