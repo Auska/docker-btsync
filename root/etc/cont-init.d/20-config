@@ -18,12 +18,12 @@ else
 	cp -f /tmp/btsync /btsync/btsync && echo "Install  ..."
 fi
 
-[[ ! -f /btsync/btsync.conf ]] && cp -f \
-	/defaults/btsync.conf /btsync/btsync.conf
+[[ ! -f /config/btsync.conf ]] && cp -f \
+	/defaults/btsync.conf /config/btsync.conf
 
 rm -rf /tmp/*
 
 # permissions
 chown abc:abc -R \
-	/btsync/ \
+	/config \
 	/mnt

@@ -1,29 +1,41 @@
-# My Blog
+# 我的博客
 http://blog.auska.win
 
-## Usage
+## 创建镜像
 
 ```
 docker create --name=btsync \
 -v <path to downloads>:/mnt \
 -v <path to btsync>:/btsync \
+-v <path to config>:/config \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
--p 8888:8888 -p 54545:54545 \
-auska/docker-btsync
+-p 8888:8888 -p 50000:50000 \
+auska/docker-btsync:latest
 ```
 
-### User / Group Identifiers
-
-Sometimes when using data volumes (`-v` flags) permissions issues can arise between the host OS and the container. We avoid this issue by allowing you to specify the user `PUID` and group `PGID`. Ensure the data volume directory on the host is owned by the same user you specify and it will "just work" ™.
-
-In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as below:
-
 ```
-  $ id <dockeruser>
-    uid=1001(dockeruser) gid=1001(dockergroup) groups=1001(dockergroup)
+docker create --name=rslsync \
+-v <path to downloads>:/mnt \
+-v <path to rslsync>:/rslsync \
+-v <path to config>:/config \
+-e PGID=<gid> -e PUID=<uid> \
+-e TZ=<timezone> \
+-p 28888:28888 -p 50000:50000 \
+auska/docker-btsync:rslsync
 ```
 
-## Versions
+## 参数解释
 
-+ **0.0.1:** Rebase to alpine linux 3.8.
+* `-p 8888` 网页UI端口
+* `-p 50000` - 软件通讯端口
+* `-v /config` - 配置文件目录
+* `-v /mnt` - 下载文件目录
+* `-e PGID` 用户的GroupID，留空为root
+* `-e PUID` 用户的UserID，留空为root
+* `-e TZ` 时区 默认 Asia/Shanghai
+
+## 版本介绍
+
+latest ： 为老的btsync版本（带DHT功能）
+resilio:  为新的resilio sync版本
