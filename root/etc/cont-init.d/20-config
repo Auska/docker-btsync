@@ -1,31 +1,11 @@
 #!/usr/bin/with-contenv bash
 
-# make folders
-mkdir -p \
-	/rslsync
-
 # copy
 
-tar zxvf /defaults/resilio-sync_x64.tar.gz -C /tmp/
-
-if [[ -f /rslsync/rslsync ]]; then
-	checksum=`md5sum /rslsync/rslsync | cut -d " " -f 1`
-	if [[ $checksum == "a9d97d4fba520a9968305545c86aff3b" ]]; then
-		echo "Already the latest version"
-	else
-		cp -f /tmp/rslsync /rslsync/rslsync && echo "Install  ..."
-	fi
-else
-	cp -f /tmp/rslsync /rslsync/rslsync && echo "Install  ..."
-fi
-
-[[ ! -f /rslsync/rslsync.conf ]] && cp -f \
-	/defaults/rslsync.conf /rslsync/rslsync.conf
-
-rm -rf /tmp/*
+[[ ! -f /config/rslsync.conf ]] && cp -f \
+	/defaults/rslsync.conf /config/rslsync.conf
 
 # permissions
 chown abc:abc -R \
-	/rslsync/ \
 	/mnt \
 	/config
