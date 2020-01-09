@@ -6,7 +6,7 @@ ARG VERSION
 LABEL build_version="blog.auska.win version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Auska"
 
-ENV GLIBC_VERSION=2.30-r0 TZ=Asia/Shanghai PORT=28888
+ENV GLIBC_VERSION=2.30-r0 TZ=Asia/Shanghai PORT=8888
 
 ADD https://download-cdn.resilio.com/2.6.4/linux-x64/resilio-sync_x64.tar.gz /tmp/sync.tgz
 
