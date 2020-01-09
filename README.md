@@ -6,7 +6,6 @@ http://blog.auska.win
 ```
 docker create --name=btsync \
 -v <path to downloads>:/mnt \
--v <path to btsync>:/btsync \
 -v <path to config>:/config \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
@@ -17,7 +16,6 @@ auska/docker-btsync:latest
 ```
 docker create --name=rslsync \
 -v <path to downloads>:/mnt \
--v <path to rslsync>:/rslsync \
 -v <path to config>:/config \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
