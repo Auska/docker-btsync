@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bash
 
 exec \
-	s6-setuidgid abc /usr/bin/rslsync --config /config/rslsync.conf &> /dev/null
+	s6-setuidgid abc /usr/bin/rslsync --webui.listen 0.0.0.0:$PORT --config /config/rslsync.conf --nodaemon
