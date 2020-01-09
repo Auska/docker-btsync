@@ -12,7 +12,7 @@ ADD https://download-cdn.resilio.com/2.6.4/linux-x64/resilio-sync_x64.tar.gz /tm
 
 RUN \
  echo "**** install packages ****" && \
- cd /tmp \
+ cd /tmp && \
  wget "https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk" && \
  wget "https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-bin-${GLIBC_VERSION}.apk" && \
  apk add --allow-untrusted glibc-${GLIBC_VERSION}.apk glibc-bin-${GLIBC_VERSION}.apk && \
