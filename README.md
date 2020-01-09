@@ -5,7 +5,6 @@ http://blog.auska.win
 
 ```
 docker create --name=btsync \
--v <path to downloads>:/downloads \
 -v <path to sync>:/mnt \
 -v <path to config>:/config \
 -e PGID=<gid> -e PUID=<uid> \
