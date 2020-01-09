@@ -20,7 +20,7 @@ docker create --name=rslsync \
 -v <path to config>:/config \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
--p 28888:28888 -p 50000:50000 \
+-p 8888:8888 -p 50000:50000 \
 auska/docker-btsync:rslsync
 ```
 
