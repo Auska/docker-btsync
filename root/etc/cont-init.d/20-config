@@ -8,4 +8,5 @@
 # permissions
 chown abc:abc -R \
 	/mnt \
-	/config
+	/config \
+	/downloads
