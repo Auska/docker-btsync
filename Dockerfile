@@ -8,7 +8,7 @@ LABEL maintainer="Auska"
 
 ENV GLIBC_VERSION=2.31-r0 TZ=Asia/Shanghai PORT=8888
 
-ADD https://download-cdn.resilio.com/2.6.4/linux-x64/resilio-sync_x64.tar.gz /tmp/sync.tgz
+ADD https://download-cdn.resilio.com/stable/linux-x64/resilio-sync_x64.tar.gz /tmp/sync.tgz
 
 RUN \
  echo "**** install packages ****" && \
