@@ -23,5 +23,5 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-EXPOSE $PORT 50000
+EXPOSE 8888 50000
 VOLUME /config /mnt /downloads
