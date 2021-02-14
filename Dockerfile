@@ -5,7 +5,7 @@ LABEL maintainer="Auska"
 
 ENV GLIBC_VERSION=2.32-r0 TZ=Asia/Shanghai PORT=8888
 
-ADD https://github.com/Auska/Files/raw/main/BitTorrent%20Sync%202.1.4/BitTorrent-Sync_x64.tar.gz /tmp/sync.tgz
+ADD https://github.com/Auska/Files/raw/main/BitTorrent%20Sync%202.0.93/BitTorrent-Sync_x64.tar.gz /tmp/sync.tgz
 
 RUN \
  echo "**** install packages ****" && \
