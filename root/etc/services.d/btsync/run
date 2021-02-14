@@ -4,4 +4,4 @@ exec \
 	s6-setuidgid abc /usr/bin/rslsync \
 		--webui.listen 0.0.0.0:$PORT \
 		--storage /config \
-		--config /config/rslsync.conf
+		--config /config/rslsync.conf &> /dev/null
