@@ -2,8 +2,8 @@
 
 # copy
 
-[[ ! -f /config/rslsync.conf ]] && \
-	/usr/bin/rslsync --dump-sample-config > /config/rslsync.conf
+[[ ! -f /config/btsync.conf ]] && \
+	/usr/bin/btsync --dump-sample-config > /config/btsync.conf
 
 # permissions
 chown abc:abc -R \
