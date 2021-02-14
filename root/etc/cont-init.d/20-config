@@ -2,7 +2,7 @@
 
 # copy
 
-[[ ! -f /config/rslsync.conf ]] && cp -f \
+[[ ! -f /config/rslsync.conf ]] && \
 	/usr/bin/rslsync --dump-sample-config > /config/rslsync.conf
 
 # permissions
