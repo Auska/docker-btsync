@@ -4,4 +4,4 @@ exec \
 	s6-setuidgid abc /usr/bin/btsync \
 		--webui.listen 0.0.0.0:$PORT \
 		--storage /config \
-		--config /config/btsync.conf
+		--config /config/btsync.conf &> /dev/null
