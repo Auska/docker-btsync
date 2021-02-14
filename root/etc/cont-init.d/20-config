@@ -4,6 +4,8 @@
 
 [[ ! -f /config/btsync.conf ]] && \
 	/usr/bin/btsync --dump-sample-config > /config/btsync.conf
+	sed -i '7a "check_for_updates" : false,' /config/btsync.conf
+	sed -i 's/"listening_port" : 0,/"listening_port" : 50000,/g' /config/btsync.conf
 
 # permissions
 chown abc:abc -R \
