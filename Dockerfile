@@ -1,9 +1,6 @@
 FROM lsiobase/alpine:3.12
 
 # set version label
-ARG BUILD_DATE
-ARG VERSION
-LABEL build_version="blog.auska.win version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Auska"
 
 ENV GLIBC_VERSION=2.32-r0 TZ=Asia/Shanghai PORT=8888
@@ -24,4 +21,4 @@ COPY root/ /
 
 # ports and volumes
 EXPOSE 8888 50000
-VOLUME /config /mnt /downloads
+VOLUME /config /media

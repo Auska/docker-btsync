@@ -3,10 +3,9 @@
 # copy
 
 [[ ! -f /config/rslsync.conf ]] && cp -f \
-	/defaults/rslsync.conf /config/rslsync.conf
+	/usr/bin/rslsync --dump-sample-config > /config/rslsync.conf
 
 # permissions
 chown abc:abc -R \
-	/mnt \
-	/config \
-	/downloads
+	/media \
+	/config
