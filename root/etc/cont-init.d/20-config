@@ -4,6 +4,7 @@
 
 [[ ! -f /config/btsync.conf ]] && \
 	/usr/bin/btsync --dump-sample-config > /config/btsync.conf
+	sed -i '7a "storage_path" : "/home/user/.sync",' /config/btsync.conf
 
 # permissions
 chown abc:abc -R \
